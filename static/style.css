@@ -43,8 +43,9 @@ z-index: 100;
     right: 0;
     width: 100%;
     height: 100%;
-    background: transparent;
+    background: #030b11;
     animation: showRight 1s ease forwards;
+    animation-delay: .3s;
 }
 
 .navbar a {
@@ -55,6 +56,19 @@ z-index: 100;
     margin-left: 35px;
     transition: .3s;
 }
+
+.navbar:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #030b11;
+    animation: showRight 1s ease forwards;
+    animation-delay: .5s;
+}
+
 
 .navbar a:hover,
 .navbar a.active {
@@ -80,30 +94,84 @@ z-index: 100;
 }
 
 .home-content h1{
-    font-size: 56px;
+    position: relative;
+    font-size: 50px;
     font-weight: 700;
     line-height: 1.2;
 
 
 }
 
+.home-content h1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #030b11;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
 .home-content h3{
+    position: relative;
     font-size: 32px;
     font-weight: 700;
     color: #00abf0;
 
 }
+
+.home-content h3::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #030b11;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.3s;
+}
+
 .home-content p{
+    position: relative;
 font-size: 16px;
 margin: 20px 0 40px;
 }
 
+.home-content p::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #030b11;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.6s;
+}
+
 .home-content .btn-box{
+    position: relative;
     display: flex;
     justify-content: space-between;
     width: 345px;
     height: 50px;
     background: transparent;
+}
+
+.home-content .btn-box::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #030b11;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.9s;
+    z-index: 2;
 }
 
 .btn-box a{
@@ -164,6 +232,19 @@ margin: 20px 0 40px;
     justify-content: space-between;
 }
 
+.home-social::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #030b11;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.2s;
+    z-index: 2;
+}
+
 .home-social a{
     position: relative;
     display: inline-flex;
@@ -202,18 +283,48 @@ margin: 20px 0 40px;
     width: 100%;
 }
 
-.home-imghover{
+/* .home-imghover{
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    width: 575px;
+    height: 90%;
+    background: transparent;
+    /* border: 2px solid red; 
+    transition: 3s;
+    animation: manipActiveHover .1s forwards;
+    animation-delay: 4s;
+    pointer-events: none;
+}
+
+.home-imghover::after{
+    content: '';
     position: absolute;
     top: 0;
-    right: 30px;
-    width: 500px;
+    right: 0;
+    width: 120%;
     height: 100%;
-    background: transparent;
-    /* border: 2px solid red; */
-    transition: 3s;
+    background: #030b11;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.2s;
+    z-index: 100;
 }
 .home-imghover:hover{
     background: #081b29;
     opacity: .8;
 
+}
+ */
+
+/* KEYFRAMES ANIMATION */
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes manipActiveHover{
+    100% {
+        pointer-events: auto;
+    }
 }
